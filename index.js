@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   
   
       function handleData(bagels){
-          console.log(bagels)
+          //console.log('bagels', bagels)
+          //console.table(bagels) //out as a table (can't do label arg)
+          console.assert(bagels, 'u got falsey') //if the input is falsey, it renders the second arg
         bagels.map(bagel => {
             renderBagel(bagel.type, bagel.id)
         })
